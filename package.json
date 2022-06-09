@@ -2,10 +2,10 @@
   "name": "hardhat-awesome-ui",
   "version": "0.0.1",
   "description": "Flexible UI to use with Hardhat",
-  "main": "dist/src/index",
-  "typings": "dist/src/index",
+  "main": "dist/index",
+  "typings": "dist/index",
   "bin": {
-    "hardhat-awesome-cli": "./src/index.ts"
+    "hardhat-awesome-ui": "./src/index.ts"
   },
   "scripts": {
     "lint:fix": "prettier --write src/**/*.{js,ts} && prettier --write test/**/*.{js,ts} && tslint --fix --config tslint.json --project tsconfig.json",
