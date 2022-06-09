@@ -1,19 +1,63 @@
 {
   "name": "hardhat-awesome-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Flexible UI to use with Hardhat",
-  "main": "index.js",
+  "main": "dist/src/index",
+  "typings": "dist/src/index",
+  "bin": {
+    "hardhat-awesome-cli": "./src/index.ts"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:fix": "prettier --write src/**/*.{js,ts} && prettier --write test/**/*.{js,ts} && tslint --fix --config tslint.json --project tsconfig.json",
+    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "test": "mocha --exit --recursive 'test/**/*.test.ts'",
+    "prepublishOnly": "tsc --project tsconfig.prod.json",
+    "build": "tsc --project tsconfig.prod.json",
+    "buidl": "tsc",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marc-aurele-besner/hardhat-awesome-ui.git"
   },
-  "author": "",
+  "author": "Marc-Aurele Besner <82244926+marc-aurele-besner@users.noreply.github.com>",
   "license": "MIT",
+  "types": "dist/src/index.d.ts",
   "bugs": {
     "url": "https://github.com/marc-aurele-besner/hardhat-awesome-ui/issues"
   },
-  "homepage": "https://github.com/marc-aurele-besner/hardhat-awesome-ui#readme"
+  "files": [
+    "dist/",
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://github.com/marc-aurele-besner/hardhat-awesome-ui#readme",
+  "peerDependencies": {
+    "hardhat": "^2.9.9"
+  },
+  "dependencies": {
+    "@metamask/detect-provider": "^1.2.0",
+    "ethers": "^5.6.8",
+    "fs": "^0.0.1-security",
+    "netlify-cli": "^10.5.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.5",
+    "zustand": "^4.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.41",
+    "@types/react": "^18.0.12",
+    "@types/styled-components": "^5.1.25",
+    "hardhat": "^2.9.9",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.8.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^4.7.3"
+  }
 }
