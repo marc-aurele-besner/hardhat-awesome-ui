@@ -28,7 +28,6 @@ const buildUi = async (args: any, env: any) => {
     }
     // List all directories in the artifacts directory
     const directories = fs.readdirSync('./artifacts/contracts')
-    console.log('directories', directories)
     if (!fs.existsSync('ui')) fs.mkdirSync('ui')
     if (!fs.existsSync('ui/src')) fs.mkdirSync('ui/src')
     if (!fs.existsSync('ui/src/artifacts')) fs.mkdirSync('ui/src/artifacts')
@@ -42,8 +41,8 @@ const buildUi = async (args: any, env: any) => {
         )
     // For each directory, list all files in it
     for (const directory of directories) {
-        const files = fs.readdirSync(`./artifacts/contracts/${directory}`)
-        const rawAbi: any = fs.readFileSync(`./artifacts/contracts/${directory}/${files[1]}`)
+        const contractName = directory.replace('.sol', '')
+        const rawAbi: any = fs.readFileSync(`./artifacts/contracts/${directory}/${contractName}.json`)
         const abi = JSON.parse(rawAbi)
         contractsList = {
             ...contractsList,
@@ -58,8 +57,8 @@ const buildUi = async (args: any, env: any) => {
             ]
         }
         fs.copyFileSync(
-            './artifacts/' + directory + '/' + directory + '.json',
-            './ui/src/artifacts/' + directory + '.json'
+            './artifacts/contracts/' + directory + '/' + contractName + '.json',
+            './ui/src/artifacts/' + contractName + '.json'
         )
     }
     await fs.writeFileSync('ui/src/artifacts/contractsList.json', JSON.stringify(contractsList, null, 2))
