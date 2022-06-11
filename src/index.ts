@@ -33,6 +33,11 @@ const buildUi = async (args: any, env: any) => {
         fs.mkdirSync('ui/src')
     if (!fs.existsSync('ui/src/artifacts'))
         fs.mkdirSync('ui/src/artifacts')
+    
+    if (!fs.existsSync('contractsAddressDeployed.json'))
+        fs.copyFileSync('./contractsAddressDeployed.json', './ui/src/artifacts/contractsAddressDeployed.json')
+    if (!fs.existsSync('contractsAddressDeployedHistory.json'))
+        fs.copyFileSync('./contractsAddressDeployedHistory.json', './ui/src/artifacts/contractsAddressDeployedHistory.json')
     // For each directory, list all files in it
     for (const directory of directories) {
         const files = fs.readdirSync(`./artifacts/contracts/${directory}`)
