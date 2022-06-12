@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+  }
+  
+html,
+body,
+#root {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: white;
+  color: black;
+  user-select: none;
+  font-family: 'Roboto', 'Trebuchet MS', sans-serif;
+}
+
+.main {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.rightHeader {
+  position: absolute;
+  top: 1vh;
+  right: 3vw;
+  font-size: 2.5em;
+  font-weight: 200;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -2px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 3vh;
+  right: 3vw;
+  font-size: 2.5em;
+  font-weight: 200;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -2px;
+}

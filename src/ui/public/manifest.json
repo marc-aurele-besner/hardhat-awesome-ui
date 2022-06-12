@@ -1,0 +1,30 @@
+{
+  "short_name": "Hardhat-Awesome-UI",
+  "name": "hardhat-awesome-ui",
+  "description": "A flexible UI for your hardhat project.",
+  "homepage_url": "https://github.com/marc-aurele-besner/hardhat-awesome-ui",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "256x256"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}
