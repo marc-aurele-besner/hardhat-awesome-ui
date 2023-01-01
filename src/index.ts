@@ -2,7 +2,7 @@
 
 import { task } from 'hardhat/config'
 
-import serveUi from './serveUi'
+import { serveStartUi, serveUi } from './serveUi'
 
 /**
  * CLI task implementation
@@ -11,4 +11,8 @@ import serveUi from './serveUi'
  */
 task('ui', 'Easy user interface to use hardhat').setAction(async function (args, env) {
     await serveUi(env)
+})
+
+task('start', 'Start user interface to use hardhat').setAction(async function (args, env) {
+    await serveStartUi(env)
 })
