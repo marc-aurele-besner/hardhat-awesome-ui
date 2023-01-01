@@ -36,7 +36,7 @@ YP   YP YP   YP 88   YD Y8888D' YP   YP YP   YP    YP           YP   YP  `8b8' `
  - [tsconfig.prod.json](./tsconfig.prod.json)
  - [tslint.json](./tslint.json)
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/marc-aurele-besner/hardhat-awesome-ui"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
+
 ## Directory Tree
 ```
 hardhat-awesome-ui/
