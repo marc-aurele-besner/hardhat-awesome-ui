@@ -14,7 +14,7 @@ YP   YP YP   YP 88   YD Y8888D' YP   YP YP   YP    YP           YP   YP  \`8b8' 
   
   ## Flexible UI to use with Hardhat
   `,
-    root_body: `<a href="https://app.netlify.com/start/deploy?repository=https://github.com/marc-aurele-besner/hardhat-awesome-ui"><img src="https://www.netlify.com/img/deploy/button.svg"></a>`,
+    root_body: ``,
     root_footer: `## Don't hesitate to contribute to this project.`,
     ignore_gitFiles: true,
     ignore_gitIgnoreFiles: true,
