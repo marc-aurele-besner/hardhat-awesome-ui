@@ -34,7 +34,7 @@
   ],
   "homepage": "https://github.com/marc-aurele-besner/hardhat-awesome-ui#readme",
   "peerDependencies": {
-    "hardhat": "^2.9.9"
+    "hardhat": "^2.12.6"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
@@ -43,8 +43,8 @@
   },
   "devDependencies": {
     "awesome-readme": "^0.0.8",
-    "hardhat": "^2.9.9",
-    "prettier": "^2.6.2",
+    "hardhat": "^2.12.6",
+    "prettier": "^2.8.3",
     "ts-node": "^10.8.1",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
