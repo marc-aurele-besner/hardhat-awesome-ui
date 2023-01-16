@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "lint:fix",
+            "type": "shell",
+            "command": "prettier --write src/**/*.{js,ts} && tslint --fix --config tslint.json --project tsconfig.json",
+            "problemMatcher": []
+        },
+        {
+            "label": "lint",
+            "type": "shell",
+            "command": "tslint --config tslint.json --project tsconfig.json",
+            "problemMatcher": []
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "mocha --exit --recursive 'test/**/*.test.ts'",
+            "problemMatcher": []
+        },
+        {
+            "label": "prepublishOnly",
+            "type": "shell",
+            "command": "tsc --project tsconfig.prod.json",
+            "problemMatcher": []
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "npx awesome-readme && tsc --project tsconfig.prod.json",
+            "problemMatcher": []
+        },
+        {
+            "label": "buidl",
+            "type": "shell",
+            "command": "tsc",
+            "problemMatcher": []
+        },
+        {
+            "label": "watch",
+            "type": "shell",
+            "command": "tsc -w",
+            "problemMatcher": []
+        }
+    ]
+}
