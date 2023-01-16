@@ -1,0 +1,15 @@
+name: CI build with NPM
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  ci_build_npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: NPM Clean Install
+        run: npm ci
+      - name: Build React App
+        run: npm run build
