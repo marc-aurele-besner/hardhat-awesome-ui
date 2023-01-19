@@ -38,8 +38,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "fs": "^0.0.1-security",
-    "inquirer": "^8.2.5"
+    "fs": "^0.0.1-security"
   },
   "devDependencies": {
     "awesome-readme": "^0.0.8",
